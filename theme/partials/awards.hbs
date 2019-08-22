@@ -16,21 +16,19 @@
       {{/if}}
 
       <header class="clear">
-        <div class="header-left">
+          {{#if awarder}}
+          <div class="awarder">
+            {{awarder}}
+          </div>
           {{#if title}}
           <div class="title">
             {{title}}
           </div>
           {{/if}}
-          {{#if awarder}}
-          <div class="awarder">
-            {{awarder}}
-          </div>
           {{/if}}
-        </div>
         {{#if date}}
         <div class="date">
-          {{Y date}}
+          {{MY date}}
         </div>
         {{/if}}
       </header>

@@ -1,16 +1,18 @@
 {
-  "name": "jsonresume-theme-stackoverflow-FA5",
-  "version": "1.4.0",
+  "name": "jsonresume-theme-stackoverflow-zh",
+  "version": "1.4.1",
   "description": "Stack Overflow theme for JSON Resume",
-  "author": "Francesco Esposito <http://fran.cesco.io>",
+  "author": "AJua",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-stackoverflow"
+    "url": "https://github.com/ajua/jsonresume-theme-stackoverflow"
   },
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "handlebars": "^4.1.2",
-    "moment": "^2.18.1"
+    "jsonresume-theme-elegant": "^1.12.1",
+    "moment": "^2.18.1",
+    "npm": "^6.11.1"
   }
 }

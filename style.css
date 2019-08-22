@@ -138,7 +138,7 @@ table {
 body,
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 13px;
+  font-size: 14.4px;
   color: #40484f;
   font-weight: 400;
   letter-spacing: 0;
@@ -324,6 +324,38 @@ section .location {
 }
 
 .position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.company::after,
+.institution::after,
+.organization::after,
+.awarder::after {
+  content: " | ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  font-weight: 600;
+}
+
+.section header {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.position,
 .company,
 .organization,
 .institution,
@@ -335,37 +367,6 @@ section .location {
   display: inline;
 }
 
-.position,
-.studyType,
-.area,
-.title,
-.language,
-.name {
-  font-weight: 600;
-}
-
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-  content: "at ";
-}
-
-.company,
-.institution,
-.organization,
-.awarder {
-  color: #606d76;
-  font-weight: 400;
-}
-
-.section header .date {
-  display: block;
-  font-size: 1rem;
-  padding: 0.1em 0;
-  color: #606d76;
-  font-weight: 400;
-}
 
 .keywords,
 .courses {
@@ -655,7 +656,13 @@ section .location {
   .institution::before,
   .organization::before,
   .awarder::before {
-    content: "| ";
+    content: none;
+  }
+  .company::after,
+  .institution::after,
+  .organization::after,
+  .awarder::after {
+    content: " | ";
   }
   .header-left {
     float: left;
@@ -691,7 +698,7 @@ section .location {
   .institution::before,
   .organization::before,
   .awarder::before {
-    content: "at ";
+    content: none;
   }
   .main-summary {
     padding: 0;
@@ -761,7 +768,7 @@ section .location {
     padding: 0;
   }
   ul.courses::before {
-    content: "Major courses: ";
+    content: "資訊相關科目: ";
   }
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
@@ -784,4 +791,7 @@ section .location {
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
+}
+.date {
+  float: right;
 }

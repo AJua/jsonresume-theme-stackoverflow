@@ -37,6 +37,24 @@
 		{{/birthDate}}
 
 		<div id="contact">
+            {{#if profiles.length}}
+                {{#each profiles}}
+                <div class="item">
+                    {{#if network}}
+                    <div class="username">
+                        <span class="fab fa-{{spaceToDash network}} {{spaceToDash network}} social"></span>
+                        {{#if url}}
+                        <span class="url">
+                            <a target="_blank" href="{{url}}">{{username}}</a>
+                        </span>
+                        {{else}}
+                        <span>{{username}}</span>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                </div>
+                {{/each}}
+            {{/if}}
 			{{#if website}}
 			<div class="website">
 				<span class="fas fa-external-link-alt"></span>
@@ -57,26 +75,6 @@
 			{{/if}}
 		</div>
 
-		{{#if profiles.length}}
-		<div id="profiles">
-			{{#each profiles}}
-			<div class="item">
-				{{#if network}}
-				<div class="username">
-					<span class="fab fa-{{spaceToDash network}} {{spaceToDash network}} social"></span>
-					{{#if url}}
-					<span class="url">
-						<a target="_blank" href="{{url}}">{{username}}</a>
-					</span>
-					{{else}}
-					<span>{{username}}</span>
-					{{/if}}
-				</div>
-				{{/if}}
-			</div>
-			{{/each}}
-		</div>
-		{{/if}}
 	</header>
 
 	{{#if summary}}

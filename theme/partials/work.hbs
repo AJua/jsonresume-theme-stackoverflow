@@ -7,7 +7,7 @@
   <section id="work">
     {{#each resume.work}}
     <section class="work-item">
-			{{#if name}}
+			{{#if company}}
 
       {{#if summary}}
         {{#if @first}}
@@ -19,18 +19,18 @@
       {{/if}}
 
 			<header class="clear">
+				<div class="company">{{company}}</div>
 				{{#if position}}
 				<div class="position">{{position}}</div>
 				{{/if}}
-				<div class="company">{{name}}</div>
 				<div class="date">
           {{#if startDate}}
 				  <span class="startDate">{{MY startDate}}</span>
           {{/if}}
           {{#if endDate}}
-					<span class="endDate">- {{MY endDate}}</span>
+					<span class="endDate">~ {{MY endDate}}</span>
           {{else}}
-					<span class="endDate">- Current</span>
+					<span class="endDate">~ 現在</span>
           {{/if}}
 				</div>
 			</header>
